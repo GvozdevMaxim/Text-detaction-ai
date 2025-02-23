@@ -1,14 +1,14 @@
-import cv2
 import re
 
-class ImageConversion:
-    @staticmethod
-    def preprocess_image(image):
-        # Преобразуем изображение в оттенках серого
-        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        # Применяем адаптивную биномализацию
-        thresh = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 31, 2)
-        return thresh
+# Попытка улучшить качество распознования текста №1
+# class ImageConversion:
+    # @staticmethod
+    # def preprocess_image(image):
+    #     # Преобразуем изображение в оттенках серого
+    #     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    #     # Применяем адаптивную биномализацию
+    #     thresh = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 31, 2)
+    #     return thresh
 
 
 class TextConversion:

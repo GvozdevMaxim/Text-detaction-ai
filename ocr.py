@@ -9,6 +9,8 @@ class OcrTextRecognition:
         result = reader.readtext(np.array(image))
         all_text = []
         for coords, text, confidence in result:
-            if confidence >= 0.5:  # Оставляем только строки с высокой уверенностью
+            if confidence >= 0.6:
                 all_text.append(text)
-        return ' '.join(all_text)
+        if all_text:
+            return ' '.join(all_text)
+        return None
